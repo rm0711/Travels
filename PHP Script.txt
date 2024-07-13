@@ -1,0 +1,557 @@
+
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+    :root{
+  --main-color: #8e44ad;
+  --black:#222;
+  --white:#fff;
+  --light-black:#777;
+  --light-white:#fff9;
+  --dark-bg:rgba(0,0,0,.7);
+  --light-bg:#eee;
+  --border:1rem solid var(--black);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+   width: 1rem;
+}
+html::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+section{
+  padding: 5rem 10%;
+}
+
+@keyframes fadeIn{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.heading{
+  background-size: cover !important;
+  background-position: center !important;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading h1{
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: var(--text-shadow);
+}
+
+.btn{
+  display: inline-block;
+  background: var(--black);
+  margin-top: 1rem;
+  color: var(--white);
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--main-color);
+}
+
+.heading-title{
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.header{
+  position: sticky;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background-color: var(--white);
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo{
+  font-size: 2.5rem;
+  color:var(--black)
+}
+.header .navbar a{
+  font-size: 2rem;
+  margin-left: 2rem;
+  color:var(--black);
+}
+.header .navbar a:hover{
+  color: var(--main-color);
+}
+#menu-btn{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+
+
+/* slider */
+
+    html,
+    body {
+      /* position: relative; */
+      height: 100%;
+    }
+
+    /* body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    } */
+
+    .swiper-slide{
+      text-align: center;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover !important;
+      background-position: center !important;
+      min-height: 60rem;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+ .swiper-button-next,
+ .swiper-button-prev{
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+  height: 7rem;
+  width: 7rem;
+  background: var(--white);
+  color: var(--black);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+ background: var(--main-color);
+ color: var(--white);
+}
+
+ .swiper-button-next::after,
+ .swiper-button-prev::after{
+ font-size: 2rem;
+
+}
+
+ .swiper-button-prev{
+ right: 7rem;
+}
+
+/* slider-over */
+
+/* Services */
+
+.services .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .box{
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.services .box-container .box:hover{
+  background: var(--black);
+}
+
+.services .box-container .box img{
+  height: 7rem;
+}
+
+.services .box-container .box h3{
+  color: var(--white);
+  font-size: 1.7rem;
+  padding-top: 1rem;
+}
+
+
+/* services-over */
+
+
+/* home-about */
+
+.home-about{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-about .image{
+  flex: 1 1 41rem;
+}
+
+.home-about .image img{
+  width: 100%;
+}
+
+.home-about .content{
+  flex: 1 1 41rem;
+  padding: 3rem;
+  background: var(--light-bg);
+}
+
+.home-about .content h3{
+  font-size: 3rem;
+  color: var(--black);
+}
+
+.home-about .content p{
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 2;
+  color: var(--black);
+}
+
+
+/* home-about over */
+
+
+
+/* footer */
+
+.footer{
+  background: url(footer.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3rem;
+}
+
+.footer .box-container .box h3{
+  color: var(--white);
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+  color: var(--light-white);
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: block;
+}
+
+.footer .box-container .box a i{
+  color: var(--main-color);
+  padding-right: .5rem;
+  transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i{
+  padding-right: 2rem;
+}
+
+.footer .credit{
+  text-align: center;
+  padding-top: 3rem;
+  margin-top: 3rem;
+  border-top: .1rem solid var(--light-white);
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.footer .credit span{
+  color: var(--main-color);
+}
+
+/* -----media queries----- */
+@media(max-width:1200px){
+  section{
+    padding: 3rem 5%;
+  }
+}
+@media(max-width:991px){
+  html{
+    font-size: 55%;
+  }
+  section{
+    padding: 3rem 2rem;
+  }
+  .home .slide .content h3{
+    font-size: 10vw;
+  }
+}
+
+@media(max-width:768px){
+  #menu-btn{
+    display: inline-block;
+    transition: .2s linear;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180%)
+    }
+  .header .navbar{
+    position: absolute;
+    top: 99%; left: 0; right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    padding: 2rem;
+    transition: .2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a{
+    display: block;
+    margin: 2rem;
+    text-align: center;
+  }
+}
+@media(max-width:450px){
+  html{
+    font-size: 50%;
+  }
+  .heading-title{
+    font-size: 3.5rem;
+  }
+
+}
+
+/* fotter-over */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+<!-- Header -->
+<section class = header>
+  <a href="Home.php" class="logo">transport.</a>
+  <nav class="navbar">
+    <a href="Home.php">Home</a> 
+    <a class="dropdown-item" href="Service.php">Services</a>
+    <a class="dropdown-item" href="Gallery.php">Gallery</a>
+    <a href="contact.php">Contact us</a>
+   <a href="About.php">About us</a>
+  </nav>
+
+  <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+<!-- Header section ends -->
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background:url(https://haziravikastravels.com/wp-content/uploads/2023/08/IMG-20230821-WA0013-1536x864.jpg) no-repeat "> 
+    </div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+<!-- Swiper-over-->
+  
+<!-- services section starts -->
+<section class="services">
+  <h1 class="heading-title">Our Services</h1>
+  <div class="box-container">
+    <a href="Service.php"><div class="box">
+      <img src="bus icon1.png" alt="">
+      <h3>bus rental Services</h3>
+    </div></a>
+    <a href="Service.php"><div class="box">
+      <img src="bus icon2.png" alt="">
+      <h3>Driver And Conductor Provider</h3>
+    </div></a>
+  </div>
+</section>
+<!-- services section ends -->
+
+<!-- home about section starts -->
+<section class="home-about">
+  <div class="image">
+    <img src="https://haziravikastravels.com/wp-content/uploads/2023/08/img37-2-scaled.jpg" alt="">
+  </div>
+  <div class="content">
+    <h3>about us</h3>
+    <p>We are providing service for transportation of Employees of these organizations and for the school going Children. We provide vehicles with 10 to 56 seats both with and without air condition......</p>
+    <a href="About.php" class="btn">read more</a>
+  </div>
+</section>
+<!-- home about section ends -->
+<!-- Footer section starts -->
+
+<section class="footer">
+  <div class="box-container">
+    <div class="box">
+      <h3>quick links</h3>
+    <a href="Home.php"> <i class="fas fa-angle-right"></i> Home</a> 
+    <a class="dropdown-item" href="Service.php"> <i class="fas fa-angle-right"></i> Services</a>
+    <a class="dropdown-item" href="Gallery.php"> <i class="fas fa-angle-right"></i> Gallery</a>
+    <a href="contact.php"> <i class="fas fa-angle-right"></i> Contact us</a>
+    <a href="About.php"> <i class="fas fa-angle-right"></i> About us</a>
+    </div>
+
+    <div class="box">
+      <h3>extra links</h3>
+    <a href="#"> <i class="fas fa-angle-right"></i> Ask Questions</a>
+    <a href="#"> <i class="fas fa-angle-right"></i> About us</a>
+    <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
+    <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
+    <a href="#"> <i class="fas fa-angle-right"></i> Ask Questions</a>
+    </div>
+
+    <div class="box">
+      <h3>Contact info</h3>
+    <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+    <a href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+    <a href="#"> <i class="fas fa-envelope"></i> haziravikas@gmail.com </a>
+    <a href="#"> <i class="fas fa-map"></i> surat, india - 395009 </a>
+    </div>
+
+    <div class="box">
+      <h3>Follow us</h3>
+    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+    <a href="#"> <i class="fa-brands fa-instagram"></i> instagram </a>
+    <a href="#"> <i class="fab fa-linkedin-in"></i> linkedin </a>
+    </div>
+  </div>
+
+  <div class="credit">created by <span>mr. frankmotor</span> | all right reserved!</div>
+</section>
+<!-- Footer section ends -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
